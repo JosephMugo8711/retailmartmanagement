@@ -1,20 +1,28 @@
+-- Write a query to create a database 
 CREATE DATABASE Retail_Mart;
 
+-- Write a query to select the database
 USE Retail_Mart;
 
+
+
+
+--Customer table with the fields as customer id, customer name, customer location, and customer phone number
 CREATE TABLE Customer_Table(
 	customer_id int not null,
     customer_name varchar(100) not null,
     customer_location varchar(100) not null,
     customer_phoneNo int not null);			
 
+--Write a query to create a product table with fields as product code, product name, price, stock and category, 
 CREATE TABLE Product_Table(
 	product_code int not null,
     product_name varchar(100) not null,
     price int not null,
     stock int not null,
     category varchar(100) not null);
-    
+ 
+ --Sales table with the fields as date, order number, product code, product name, quantity, and price.
 CREATE TABLE Sales_Table(
 	order_date varchar(100) not null,
     order_no varchar(100) not null,
@@ -25,7 +33,9 @@ CREATE TABLE Sales_Table(
 	quantity int not null,
     price int not null);
 
-    
+
+--Write a query to insert values into the tables.
+-- for customer_table
 INSERT INTO Customer_Table VALUES('1111','Nisha','kerala','8392320');
 INSERT INTO Customer_Table VALUES('1212','Oliver','kerala','4353891');
 INSERT INTO Customer_Table VALUES('1216','Nila','delhi','3323242');
@@ -38,6 +48,8 @@ INSERT INTO Customer_Table VALUES('9021','Rithika','Kashmir','1121344');
 INSERT INTO Customer_Table VALUES('9212','Jessica','banglore','1233435');
 INSERT INTO Customer_Table VALUES('9875','Stephen','chennai','1212133');
 
+
+-- for product_table
 INSERT INTO Product_Table VALUES('1','tulip','198','5','perfume');
 INSERT INTO Product_Table VALUES('2','cornoto','50','21','icecream');
 INSERT INTO Product_Table VALUES('3','Pen','10','52','Stationary');
@@ -65,7 +77,7 @@ INSERT INTO Product_Table VALUES('24','serum','90','4','hair product');
 INSERT INTO Product_Table VALUES('25','conditioner','200','5','hair product');
 INSERT INTO Product_Table VALUES('26','oil bottle','40','2','kitchen utensil');
 
-
+-- for sales_table
 INSERT INTO Sales_Table VALUES('24-07-2016', 'HM06', '9212', 'Jessica', 11, 'pencil', '3', '30');
 INSERT INTO Sales_Table VALUES('24-07-2016','HM06','9212','Jessica','11','pencil','3','30');
 INSERT INTO Sales_Table VALUES('19-10-2016','HM09','3921','Mukesh','17','biscuits','10','600');
